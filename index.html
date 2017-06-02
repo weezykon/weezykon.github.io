@@ -707,7 +707,7 @@
                         </div>
                         <div class="row">
                             <p id="message"></p>
-                            <form method="post" id="sendMsg">
+                            <form method="post" id="sendmsg">
                                 <div class="form-inner">
                                     <div class="col-md-5 col-sm-6">
                                         <div class="input-box">
@@ -782,7 +782,7 @@
     <script type="text/javascript">
         $(document).ready(function(){
             // Mail Login
-            $('#sendMsg').submit(function(event){
+            $('#sendmsg').submit(function(event){
                 event.preventDefault();
                  console.log($('form').serializeArray());
                 $.ajax({
