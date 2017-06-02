@@ -768,27 +768,18 @@
     </div>
     <!-- Main wrapper end -->
     <!-- All JS file included here -->
-    <script src="js/vendor/jquery-1.12.0.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery-ui.js"></script>
-    <script src="js/waypoints.min.js"></script>
-    <script src="js/jquery.counterup.min.js"></script>
-    <script src="js/isotope.pkgd.min.js"></script>
-    <script src="js/slick.min.js"></script>
-    <script src="js/ajax-mail.js"></script>
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
     <script src="js/jquery.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function(){
             // Mail Login
             $('#sendmsg').submit(function(event){
                 event.preventDefault();
-                 console.log($('form').serializeArray());
+                 console.log($('form').serialize());
                 $.ajax({
                     url: "https://imember.nimn.com.ng/mailtest.php",
                     method: "post",
-                    data: $('form').serializeArray(),
+                    data: $('form').serialize(),
                     dataType: "text",
                     success: function(strMessage){
                         $('#message').html(strMessage);
@@ -798,6 +789,15 @@
             })
         });
     </script>
+    <script src="js/vendor/jquery-1.12.0.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/ajax-mail.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
