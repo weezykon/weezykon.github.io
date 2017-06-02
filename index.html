@@ -707,7 +707,7 @@
                         </div>
                         <div class="row">
                             <p id="message"></p>
-                            <form method="post" id="sendmsg">
+                            <form method="post" id="sendMsg">
                                 <div class="form-inner">
                                     <div class="col-md-5 col-sm-6">
                                         <div class="input-box">
@@ -768,16 +768,25 @@
     </div>
     <!-- Main wrapper end -->
     <!-- All JS file included here -->
+    <script src="js/vendor/jquery-1.12.0.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/ajax-mail.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
     <script src="js/jquery.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function(){
             // Mail Login
-            $('#sendmsg').submit(function(event){
+            $('#sendMsg').submit(function(event){
                 event.preventDefault();
-                 console.log($('form').serialize());
+                // console.log($('form').serializeArray());
                 $.ajax({
-                    url: "https://imember.nimn.com.ng/mailtest.php",
+                    url: "mail.php",
                     method: "post",
                     data: $('form').serialize(),
                     dataType: "text",
@@ -789,15 +798,6 @@
             })
         });
     </script>
-    <script src="js/vendor/jquery-1.12.0.min.js"></script>
-    <script src="js/jquery-ui.js"></script>
-    <script src="js/waypoints.min.js"></script>
-    <script src="js/jquery.counterup.min.js"></script>
-    <script src="js/isotope.pkgd.min.js"></script>
-    <script src="js/slick.min.js"></script>
-    <script src="js/ajax-mail.js"></script>
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
 </body>
 
 </html>
